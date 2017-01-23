@@ -140,6 +140,8 @@ template { display: none; }
 /** Add the correct display in IE 10-. */
 [hidden] { display: none; }
 
+html, body { overflow-x: hidden; }
+
 .header { width: 100vw; color: rgba(0, 0, 0, 0.9); }
 
 .header__logo { text-align: center; }
@@ -162,6 +164,12 @@ template { display: none; }
 
 a { text-decoration: none; }
 
+.button { font-size: 25px; padding: 10px 50px; border-radius: 30px; box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2); transition: all 200ms ease-in-out; cursor: pointer; }
+
+.button:hover { -webkit-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1); }
+
+.button-primary { color: white; background: linear-gradient(#f857a6, #ff5858); }
+
 .footer { position: fixed; bottom: 0; width: 100vw; }
 
 .footer__content-container { text-align: center; padding: 50px; padding-top: 0; color: white; z-index: 3; position: relative; }
@@ -169,5 +177,13 @@ a { text-decoration: none; }
 .footer__logo { margin: 0; }
 
 .footer__bg { background: linear-gradient(#ff5858, #f857a6); position: absolute; top: -40px; bottom: 0; left: -100px; right: -100px; z-index: 2; border-radius: 60%; height: 400px; }
+
+.page-content { margin: 0 auto; max-width: 800px; padding: 0 20px; }
+
+.page-content__center { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; height: 50vh; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+
+.scroll { height: 600px; }
+
+.sign-in__btn { margin-top: 30px; }
 
 /*# sourceMappingURL=main.css.map */
