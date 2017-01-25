@@ -33,6 +33,49 @@
     font-weight: 300
   a
     color: $orange
+  +m('greeting')
+    color: $purple
+    font-weight: normal
+    background: white
+    padding: 5px 25px
+    margin: 0 0 0 10px
+    border-radius: 20px
+    box-sizing: border-box
+    background-clip: padding-box
+    position: relative
+    box-shadow: 1px 5px 10px rgba(0,0,0,0.2)
+    &::after
+      position: absolute
+      top: -4px
+      left: -4px
+      right: -4px
+      bottom: -4px
+      content: ' '
+      background: linear-gradient($light-purple, $purple)
+      z-index: -1
+      border-radius: 20px
+    +m('label')
+       color: $purple
+       font-weight: normal
+       background: white
+       padding: 5px 40px
+       margin: 0 0 0 10px
+       border-radius: 20px
+       box-sizing: border-box
+       background-clip: padding-box
+       position: relative
+       box-shadow: 1px 5px 10px rgba(0,0,0,0.2)
+       &::after
+         position: absolute
+         top: -4px
+         left: -4px
+         right: -4px
+         bottom: -4px
+         content: ' '
+         background: linear-gradient($orange, $purple)
+         z-index: -1
+         border-radius: 20px
+
 a
   text-decoration: none
 

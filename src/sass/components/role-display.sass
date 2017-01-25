@@ -1,0 +1,25 @@
+.role-display
+  width: 320px
+  height: 130px
+  max-width: 90vw
+  background: $light-grey
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2)
+  border-radius: 8px
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+
+  +e('role-label')
+    position: absolute
+    z-index: 2
+    top: -10px
+    left: 10px
+
+  +e('role-value')
+     background: linear-gradient($light-purple, $dark-purple)
+     -webkit-background-clip: text
+     -webkit-text-fill-color: transparent
+     font-weight: bold
+     font-size: 35px
+     margin-top: -5px
