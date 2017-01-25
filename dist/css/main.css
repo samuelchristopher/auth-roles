@@ -178,19 +178,15 @@ a { text-decoration: none; }
 
 .button-primary { color: white; background: linear-gradient(#f857a6, #ff5858); }
 
-.footer { position: fixed; bottom: 0; width: 100vw; }
-
-.footer__content-container { text-align: center; padding: 50px; padding-top: 0; color: white; z-index: 3; position: relative; }
-
-.footer__logo { margin: 0; }
-
-.footer__bg { background: linear-gradient(#ff5858, #f857a6); position: absolute; top: -40px; bottom: 0; left: -100px; right: -100px; z-index: 2; border-radius: 60%; height: 400px; }
+.footer { width: 150vw; margin-left: -25vw; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; text-align: center; background: linear-gradient(#ff5858, #f857a6); border-radius: 80% 80% 0 0; padding: 20px 0 40px 0; color: white; }
 
 .page-content { margin: 0 auto; max-width: 800px; padding: 0 20px; }
 
 .page-content__center { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; height: 50vh; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
 .scroll { height: 600px; }
+
+@media all and (orientation: landscape) { .page-content__center { margin: 40px 0 40px 0; } }
 
 .role-display { width: 320px; height: 130px; max-width: 90vw; background: #fbfbfb; box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); border-radius: 8px; position: relative; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
