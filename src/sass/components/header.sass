@@ -6,3 +6,40 @@
   +e('menu-btn')
       background: linear-gradient($orange, $purple)
       color: white
+  +e('close-btn')
+      background: white
+      color: $nav-close
+
+
+  +e('nav')
+    background: $nav-close
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 80px 0 0 0
+    display: flex
+    align-items: center
+    flex-direction: column
+    z-index: 3
+    opacity: 0
+
+  +e('nav-links')
+    display: flex
+    flex-direction: column
+    text-align: center
+    margin-top: 40px
+    width: 100vw
+
+  +e('nav-link')
+    color: white
+    font-size: 30px
+    margin-top: 30px
+    transition: transform 200ms ease-in-out
+    will-change: transfrom
+    &:hover
+      transform: scale(1.1)
+
+.header__nav.open
+  opacity: 1
