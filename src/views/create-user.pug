@@ -1,0 +1,17 @@
+extends template
+block content
+  .page-content
+    .create-user
+      .create-user__title create user
+      .create-user__form
+        input(placeholder="email")
+        input(placeholder="password")
+        input(placeholder="confirm password")
+      .create-user__role-display-container
+        .role-display
+          .role-display__role-label
+            p.badge--greeting--label Role
+          .role-display__role-value Administrator
+      .create-user__checkbox-group
+        input(type="checkbox" label="Send verification email").create-user__checkbox
+      .button.button-primary Create User
