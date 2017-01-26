@@ -1,0 +1,19 @@
+.not-found
+  max-width: 400px
+  // background: pink
+  text-align: center
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 50vh
+
+  +e('error-code')
+    color: $dark-grey
+    font-size: 100px
+    margin: 0
+
+  +e('message')
+    color: $dark-grey
+    font-size: 20px

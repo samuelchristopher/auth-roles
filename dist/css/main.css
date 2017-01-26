@@ -234,4 +234,10 @@ a { text-decoration: none; }
 
 .create-user__button { width: 140px; margin: 0 auto; }
 
+.not-found { max-width: 400px; text-align: center; margin: 0 auto; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; height: 50vh; }
+
+.not-found__error-code { color: #d5d5d5; font-size: 100px; margin: 0; }
+
+.not-found__message { color: #d5d5d5; font-size: 20px; }
+
 /*# sourceMappingURL=main.css.map */
