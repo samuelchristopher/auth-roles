@@ -1,8 +1,8 @@
 extends template
 block content
-  .page-content
+  .page-content--long
     .create-user
-      .create-user__title create user
+      .page__title create user
       .create-user__form
         input(placeholder="email")
         input(placeholder="password")
@@ -12,6 +12,6 @@ block content
           .role-display__role-label
             p.badge--greeting--label Role
           .role-display__role-value Administrator
-      .create-user__checkbox-group
-        input(type="checkbox" label="Send verification email").create-user__checkbox
-      .button.button-primary Create User
+      //- .create-user__checkbox-group
+      //-   input(type="checkbox" label="Send verification email").create-user__checkbox
+      .button.button-primary.create-user__button Create User
