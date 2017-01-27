@@ -202,7 +202,7 @@ a { text-decoration: none; }
 
 .page-content__center { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; height: 50vh; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
-.page-content--long { margin: 0 auto; max-width: 800px; padding: 0 20px; min-height: 95vh; }
+.page-content--long { margin: 0 auto; max-width: 800px; padding: 0 20px; min-height: 120vh; }
 
 .scroll { height: 600px; }
 
