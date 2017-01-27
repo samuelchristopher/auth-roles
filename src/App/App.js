@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './Header'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Footer from './Footer'
 
 export default class App extends Component {
@@ -7,7 +8,9 @@ export default class App extends Component {
     return (
       <div>
        <Header />
-       {this.props.children}
+       <MuiThemeProvider>
+         {this.props.children}
+       </MuiThemeProvider>
        <Footer />
       </div>
     )
