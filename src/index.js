@@ -7,9 +7,20 @@ import SignIn from './Auth/SignIn'
 import Dashboard from './Dash/Dash'
 import CreateUser from './CreateUser/CreateUser'
 import injectTapEventPlugin from 'react-tap-event-plugin'
+import firebaseApp from 'firebase/app'
 import './index.css'
 
 injectTapEventPlugin()
+
+let config = {
+   apiKey: "AIzaSyCdeimPW9X1tnupiDI00HIZzubLhrnmkUk",
+   authDomain: "auth-roles.firebaseapp.com",
+   databaseURL: "https://auth-roles.firebaseio.com",
+   storageBucket: "auth-roles.appspot.com",
+   messagingSenderId: "545622531560"
+ }
+
+ firebaseApp.initializeApp(config)
 
 ReactDOM.render(
   <Router history={browserHistory}>
