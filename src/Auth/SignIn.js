@@ -14,10 +14,8 @@ export default class SignIn extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this)
-    this.signin = this.signin.bind(this)
+    this.signIn = this.signIn.bind(this)
   }
-
-
 
   handleChange(e, value) {
     let { name } = e.target
@@ -26,11 +24,11 @@ export default class SignIn extends Component {
     })
   }
 
-  signin() {
+  signIn() {
     let { email, password } = this.state
     auth().signInWithEmailAndPassword(email, password)
       .then(() => {
-        browserHistory.push('/dashboard')
+        browserHistory.push('/')
         return this.props.showSnack('Signed in successfully!')
       }, (err) => this.props.showSnack(err.message))
   }
@@ -58,7 +56,7 @@ export default class SignIn extends Component {
             value={this.state.password}
             onChange={this.handleChange}
           />
-          <div onTouchTap={this.signin} className={disabled ? "button button-primary sign-in__btn disabled" : "button button-primary sign-in__btn"}>Sign In</div>
+          <div onTouchTap={this.signIn} className={disabled ? "button button-primary sign-in__btn disabled" : "button button-primary sign-in__btn"}>Sign In</div>
         </div>
       </div>
     )
