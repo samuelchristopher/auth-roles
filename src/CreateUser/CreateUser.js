@@ -3,7 +3,27 @@ import { grey400 } from 'material-ui/styles/colors'
 import TextField from 'material-ui/TextField'
 
 export default class CreateUser extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      email: '',
+      password: '',
+      passwordConfirm: ''
+    }
+
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(e, value) {
+    let { name } = e.target
+    this.setState({
+      [name]: value
+    })
+  }
+
   render() {
+    let disabled = ((this.state.email && this.state.password) && (this.state.password === this.state.passwordConfirm)) ? false : true
     return (
       <div className="page-content--long">
         <div className="create-user">
@@ -13,6 +33,8 @@ export default class CreateUser extends Component {
               fullWidth={true}
               floatingLabelText="Email"
               type="email"
+              onChange={this.handleChange}
+              name="email"
               underlineFocusStyle={{ borderColor: grey400 }}
               floatingLabelFocusStyle={{ color: grey400 }}
             />
@@ -20,6 +42,8 @@ export default class CreateUser extends Component {
               fullWidth={true}
               floatingLabelText="Password"
               type="password"
+              onChange={this.handleChange}
+              name="password"
               underlineFocusStyle={{ borderColor: grey400 }}
               floatingLabelFocusStyle={{ color: grey400 }}
             />
@@ -27,6 +51,8 @@ export default class CreateUser extends Component {
               fullWidth={true}
               floatingLabelText="Confirm Password"
               type="password"
+              onChange={this.handleChange}
+              name="passwordConfirm"
               underlineFocusStyle={{ borderColor: grey400 }}
               floatingLabelFocusStyle={{ color: grey400 }}
             />
@@ -39,7 +65,7 @@ export default class CreateUser extends Component {
               <div className="role-display__role-value">Administrator</div>
             </div>
           </div>
-          <div className="button button-primary create-user__button">Create User</div>
+          <div className={disabled ? "button button-primary create-user__button disabled" : "button button-primary create-user__button"}>Create User</div>
         </div>
       </div>
     )
