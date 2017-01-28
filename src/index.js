@@ -5,6 +5,7 @@ import App from './App/App'
 import NotFound from './NotFound/NotFound'
 import SignIn from './Auth/SignIn'
 import IsSignedIn from './Auth/IsSignedIn'
+import IsNotSignedIn from './Auth/IsNotSignedIn'
 import Dashboard from './Dash/Dash'
 import CreateUser from './CreateUser/CreateUser'
 import injectTapEventPlugin from 'react-tap-event-plugin'
@@ -26,7 +27,7 @@ let config = {
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <Route path="sign-in" component={SignIn} />
+      <Route path="sign-in" component={SignIn} onEnter={IsNotSignedIn}/>
       <IndexRoute component={Dashboard} onEnter={IsSignedIn}/>
       <Route path="create-user" component={CreateUser} />
       <Route path="*" component={NotFound} />
