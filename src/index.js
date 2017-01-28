@@ -4,6 +4,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import App from './App/App'
 import NotFound from './NotFound/NotFound'
 import SignIn from './Auth/SignIn'
+import SignOut from './Auth/SignOut'
 import IsSignedIn from './Auth/IsSignedIn'
 import IsNotSignedIn from './Auth/IsNotSignedIn'
 import Dashboard from './Dash/Dash'
@@ -28,6 +29,7 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <Route path="sign-in" component={SignIn} onEnter={IsNotSignedIn}/>
+      <Route path="sign-out" component={SignOut} onEnter={IsSignedIn}/>
       <IndexRoute component={Dashboard} onEnter={IsSignedIn}/>
       <Route path="create-user" component={CreateUser} />
       <Route path="*" component={NotFound} />
