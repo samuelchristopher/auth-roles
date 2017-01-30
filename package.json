@@ -21,7 +21,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "now-start": "cd build && serve -s ./",
-    "now-update-alias": "now alias https://auth-roles-liixegoeoc.now.sh auth-roles",
+    "update-alias": "now alias  auth-roles",
     "deploy": "now"
   }
 }

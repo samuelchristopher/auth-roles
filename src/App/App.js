@@ -3,6 +3,7 @@ import Header from './Header'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Footer from './Footer'
 import Snackbar from 'material-ui/Snackbar'
+import firebaseApp from 'firebase/app'
 
 export default class App extends Component {
   constructor() {
@@ -15,7 +16,7 @@ export default class App extends Component {
 
     this.showSnack = this.showSnack.bind(this)
     this.handleRequestClose = this.handleRequestClose.bind(this)
-    
+
   }
 
   showSnack(message) {
@@ -23,6 +24,17 @@ export default class App extends Component {
       open: true,
       message
     })
+  }
+
+  componentDidMount() {
+    let config = {
+       apiKey: "AIzaSyCdeimPW9X1tnupiDI00HIZzubLhrnmkUk",
+       authDomain: "auth-roles.firebaseapp.com",
+       databaseURL: "https://auth-roles.firebaseio.com",
+       storageBucket: "auth-roles.appspot.com",
+       messagingSenderId: "545622531560"
+     }
+    this._secondaryApp = firebaseApp.initializeApp(config, 'Secondary')
   }
 
   handleRequestClose() {
@@ -37,7 +49,8 @@ export default class App extends Component {
         <div>
           <Header />
             {this.props.children && React.cloneElement(this.props.children, {
-              showSnack: this.showSnack
+              showSnack: this.showSnack,
+              secondaryApp: this._secondaryApp
             })}
           <Footer />
           <Snackbar

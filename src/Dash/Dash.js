@@ -27,12 +27,7 @@ export default class Dashboard extends Component {
     let userKey = auth().currentUser.uid
     let userRef = database().ref(`users/${userKey}`)
     userRef.on('value', (snap) => {
-      let user = snap.val()
-      let { firstName, isAdmin } = user
-      let role
-      if (isAdmin) {
-        role = 'Administrator'
-      }
+      let { firstName, role } = snap.val()
       this.setState({
         firstName,
         role,
